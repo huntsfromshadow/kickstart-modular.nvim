@@ -47,22 +47,28 @@ require('lazy').setup({
   -- init.lua. If you want these files, they are in the repository, so you can just download them and
   -- place them in the correct locations.
 
-  -- NOTE: Next step on your Neovim journey: Add/Configure additional plugins for Kickstart
+  -- Prebuild Kickstarer plugins
   --
-  --  Here are some example plugins that I've included in the Kickstart repository.
-  --  Uncomment any of the lines below to enable them (you will need to restart nvim).
-  --
-  -- require 'kickstart.plugins.debug',
-  -- require 'kickstart.plugins.indent_line',
-  -- require 'kickstart.plugins.lint',
-  -- require 'kickstart.plugins.autopairs',
-  -- require 'kickstart.plugins.neo-tree',
+  require 'kickstart.plugins.debug',
+  require 'kickstart.plugins.indent_line',
+  require 'kickstart.plugins.lint',
+  require 'kickstart.plugins.autopairs',
+  require 'kickstart.plugins.neo-tree',
 
-  -- NOTE: The import below can automatically add your own plugins, configuration, etc from `lua/custom/plugins/*.lua`
-  --    This is the easiest way to modularize your config.
-  --
   --  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
-  -- { import = 'custom.plugins' },
+  { import = 'custom.plugins.coding.todo-comments' },
+  { import = 'custom.plugins.editor.file-tree' },
+  { import = 'custom.plugins.editor.fzf' },
+  { import = 'custom.plugins.editor.grug-far' },
+  { import = 'custom.plugins.editor.lazygit' },
+  { import = 'custom.plugins.editor.ufo' },
+  { import = 'custom.plugins.formatting.prettier' },
+  { import = 'custom.plugins.languages.docker' },
+  { import = 'custom.plugins.languages.go' },
+  { import = 'custom.plugins.languages.markdown' },
+  { import = 'custom.plugins.languages.python' },
+  { import = 'custom.plugins.languages.typescript' },
+
   --
   -- For additional information with loading, sourcing and examples see `:help lazy.nvim-🔌-plugin-spec`
   -- Or use telescope!
